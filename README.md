@@ -20,6 +20,7 @@
 | aoaojiao-domain     | 放置领域模型  |
 | aoaojiao-service    | 放置不同模块的服务 |
 | aoaojiao-starter    | 启动和测试，单体项目可放这个模块，微服务可将服务的启动和测试放置 service 模块 |
+
 以上模块可以灵活变动，可以增加自己的模块或者减少本架构中的模块
 
 
