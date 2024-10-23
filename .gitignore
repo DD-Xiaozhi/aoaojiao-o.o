@@ -36,3 +36,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### 依赖版本配置文件 ###
+.flattened-pom.xml

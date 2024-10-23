@@ -1,8 +1,12 @@
 package com.xiaozhi.zhh.aoaojiao.controller;
 
+import com.xiaozhi.zhh.aoaojiao.entity.R;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.time.LocalDateTime;
 
 /**
  * @author DiZhiXu
@@ -13,7 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWord {
 
     @GetMapping
-    public String hello() {
-        return "hello world";
+    public LocalDateTime hello() {
+        return LocalDateTime.now();
+    }
+
+    @GetMapping("test")
+    public R<LocalDateTime> testLocalDateTime(@RequestParam String date) {
+        return R.success(LocalDateTime.now());
     }
 }

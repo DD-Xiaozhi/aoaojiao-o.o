@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.xiaozhi.zhh</groupId>
         <artifactId>aoaojiao-service</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${rersion}</version>
     </parent>
 
     <artifactId>aoaojiao-media</artifactId>
