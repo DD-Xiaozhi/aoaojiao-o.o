@@ -1,0 +1,55 @@
+package com.xiaozhi.zhh.aoaojiao.log.aspect;
+
+import cn.hutool.json.JSONUtil;
+import com.xiaozhi.zhh.aoaojiao.toolkit.ServletUtil;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+import org.springframework.validation.BeanPropertyBindingResult;
+import org.springframework.web.multipart.MultipartFile;
+
+@Slf4j
+@Aspect
+@Component
+@AllArgsConstructor
+@Order(Integer.MIN_VALUE)
+public class WebRequestLogAspect {
+
+    @Around("execution(public * com.xiaozhi.zhh.aoaojiao..controller..*.*(..))")
+    public Object doAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        long startTime = System.currentTimeMillis();
+        HttpServletRequest request = ServletUtil.getRequest();
+
+        try {
+            log.info("Request: {} {}", request.getMethod(), request.getRequestURL().toString());
+            if (log.isDebugEnabled()) {
+                log.debug("Request params: {}", prettyFormatArgs(proceedingJoinPoint.getArgs()));
+            }
+            return proceedingJoinPoint.proceed();
+        } finally {
+            log.info("Execute time: {} ms", System.currentTimeMillis() - startTime);
+        }
+    }
+
+    private String prettyFormatArgs(Object[] args) {
+        Object[] arguments  = new Object[args.length];
+        for (int i = 0; i < args.length; i++) {
+            if (args[i] instanceof ServletRequest
+                    || args[i] instanceof ServletResponse
+                    || args[i] instanceof MultipartFile
+                    || args[i] instanceof BeanPropertyBindingResult) {
+                // BeanPropertyBindingResult 的 json 解析会报错
+                continue;
+            }
+            arguments[i] = args[i];
+        }
+        return JSONUtil.toJsonStr(arguments);
+    }
+}
