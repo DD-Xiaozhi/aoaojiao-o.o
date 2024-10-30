@@ -1,5 +1,5 @@
 # Aoaojiao-o.o
-啥都能干平台。参考 Alibaba 的 COLA v5 架构
+嗷嗷叫平台基础框架。参考 Alibaba 的 COLA v5 架构，此架构单体服务和微服务皆可使用
 
 ## 技术组件
 | 组件         | 依赖版本 |
