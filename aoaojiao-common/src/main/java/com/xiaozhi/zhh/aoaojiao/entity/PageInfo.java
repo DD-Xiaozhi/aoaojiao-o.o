@@ -7,6 +7,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * 分页查询返回类
+ *
  * @author DD
  * date    2024/10/21 18:20
  */

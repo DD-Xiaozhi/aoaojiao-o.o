@@ -15,6 +15,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.web.multipart.MultipartFile;
 
+/**
+ * 请求日志记录 aop
+ *
+ * @author DiZhiXu
+ * date    2024/10/22 21:05
+ */
 @Slf4j
 @Aspect
 @Component
@@ -39,7 +45,7 @@ public class WebRequestLogAspect {
     }
 
     private String prettyFormatArgs(Object[] args) {
-        Object[] arguments  = new Object[args.length];
+        Object[] arguments = new Object[args.length];
         for (int i = 0; i < args.length; i++) {
             if (args[i] instanceof ServletRequest
                     || args[i] instanceof ServletResponse

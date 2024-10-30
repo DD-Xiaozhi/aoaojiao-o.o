@@ -1,6 +1,6 @@
-package com.xiaozhi.zhh.aoaojiao.config;
+package com.xiaozhi.zhh.aoaojiao.web.config;
 
-import com.xiaozhi.zhh.aoaojiao.converter.LocalDateTimeConvertor;
+import com.xiaozhi.zhh.aoaojiao.web.converter.LocalDateTimeConvertor;
 import lombok.AllArgsConstructor;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.stereotype.Component;

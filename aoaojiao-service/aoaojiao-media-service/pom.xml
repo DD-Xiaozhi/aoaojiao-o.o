@@ -9,7 +9,8 @@
         <version>${rersion}</version>
     </parent>
 
-    <artifactId>aoaojiao-ai</artifactId>
+    <artifactId>aoaojiao-media-service</artifactId>
+    <description>Aoaojiao多媒体服务</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

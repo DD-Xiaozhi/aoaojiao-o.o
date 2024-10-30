@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-sys</artifactId>
+            <artifactId>aoaojiao-sys-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

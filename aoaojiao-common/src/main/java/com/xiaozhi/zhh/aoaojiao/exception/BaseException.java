@@ -6,6 +6,8 @@ import com.xiaozhi.zhh.aoaojiao.enums.GeneralErrorCode;
 import lombok.Getter;
 
 /**
+ * 自定义异常类
+ *
  * @author DD
  * date    2024/05/31 11:13
  */

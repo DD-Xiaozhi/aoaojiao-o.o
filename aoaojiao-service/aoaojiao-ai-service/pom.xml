@@ -9,8 +9,7 @@
         <version>${rersion}</version>
     </parent>
 
-    <artifactId>aoaojiao-mail</artifactId>
-    <description>Aoaojiao商城服务</description>
+    <artifactId>aoaojiao-ai-service</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

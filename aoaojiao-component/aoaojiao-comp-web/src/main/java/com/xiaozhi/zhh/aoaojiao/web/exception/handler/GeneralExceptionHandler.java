@@ -1,4 +1,4 @@
-package com.xiaozhi.zhh.aoaojiao.exception.handler;
+package com.xiaozhi.zhh.aoaojiao.web.exception.handler;
 
 import com.xiaozhi.zhh.aoaojiao.entity.R;
 import com.xiaozhi.zhh.aoaojiao.enums.GeneralErrorCode;

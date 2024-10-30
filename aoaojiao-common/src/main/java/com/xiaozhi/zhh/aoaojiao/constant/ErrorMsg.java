@@ -3,13 +3,15 @@ package com.xiaozhi.zhh.aoaojiao.constant;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 错误码常量类
+ *
  * @author DD
  * date    2024/8/4 19:42
  */
 @UtilityClass
 public class ErrorMsg {
 
-    public static final String SUCCESS = "success";
+    public static final String SUCCESS = "00000";
     public static final String SERVER_BUSY = "服务器繁忙，请稍后再试";
     public static final String UNAUTHORIZED = "未授权";
     public static final String INVALID_TOKEN = "Invalid token";

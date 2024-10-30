@@ -11,6 +11,8 @@ import java.util.concurrent.Callable;
 import java.util.function.Supplier;
 
 /**
+ * MDC工具类
+ *
  * @author DD
  * date    2024/05/31 11:13
  */

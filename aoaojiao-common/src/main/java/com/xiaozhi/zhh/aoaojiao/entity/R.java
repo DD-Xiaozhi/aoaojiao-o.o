@@ -1,5 +1,6 @@
 package com.xiaozhi.zhh.aoaojiao.entity;
 
+import com.xiaozhi.zhh.aoaojiao.constant.ErrorMsg;
 import com.xiaozhi.zhh.aoaojiao.toolkit.MDCUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,8 +14,6 @@ import org.apache.commons.lang3.StringUtils;
 @AllArgsConstructor
 public class R<T> {
 
-    public static final String SUCCESS_CODE = "00000";
-
     private String code;
 
     private String message;
@@ -24,15 +23,15 @@ public class R<T> {
     private T data;
 
     public boolean isSuccess() {
-        return SUCCESS_CODE.equals(code);
+        return ErrorMsg.SUCCESS.equals(code);
     }
 
     public static <T> R<T> success(T data) {
-        return new R<>(SUCCESS_CODE, StringUtils.EMPTY, MDCUtil.getTraceId(), data);
+        return new R<>(ErrorMsg.SUCCESS, StringUtils.EMPTY, MDCUtil.getTraceId(), data);
     }
 
     public static <T> R<T> success() {
-        return new R<>(SUCCESS_CODE, StringUtils.EMPTY, MDCUtil.getTraceId(), null);
+        return new R<>(ErrorMsg.SUCCESS, StringUtils.EMPTY, MDCUtil.getTraceId(), null);
     }
 
     public static <T> R<T> error(String code, String message) {

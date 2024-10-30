@@ -1,4 +1,4 @@
-package com.xiaozhi.zhh.aoaojiao.config;
+package com.xiaozhi.zhh.aoaojiao.web.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;

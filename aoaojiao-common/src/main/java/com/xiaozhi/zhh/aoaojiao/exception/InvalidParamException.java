@@ -3,6 +3,8 @@ package com.xiaozhi.zhh.aoaojiao.exception;
 import com.xiaozhi.zhh.aoaojiao.enums.GeneralErrorCode;
 
 /**
+ * 无效参数异常
+ *
  * @author DD
  * date    2024/06/04 13:33
  */

@@ -9,10 +9,10 @@
         <version>${rersion}</version>
     </parent>
     <modules>
-        <module>aoaojiao-sys</module>
-        <module>aoaojiao-ai</module>
-        <module>aoaojiao-mail</module>
-        <module>aoaojiao-media</module>
+        <module>aoaojiao-sys-service</module>
+        <module>aoaojiao-ai-service</module>
+        <module>aoaojiao-mail-service</module>
+        <module>aoaojiao-media-service</module>
     </modules>
 
     <artifactId>aoaojiao-service</artifactId>

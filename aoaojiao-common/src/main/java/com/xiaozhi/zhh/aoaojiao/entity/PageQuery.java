@@ -3,6 +3,8 @@ package com.xiaozhi.zhh.aoaojiao.entity;
 import lombok.Data;
 
 /**
+ * 分页查询DTO
+ *
  * @author DD
  * date    2024/10/21 18:20
  */
