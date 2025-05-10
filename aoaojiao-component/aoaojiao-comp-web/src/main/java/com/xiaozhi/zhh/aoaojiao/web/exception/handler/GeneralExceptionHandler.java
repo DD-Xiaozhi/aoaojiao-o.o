@@ -5,6 +5,7 @@ import com.xiaozhi.zhh.aoaojiao.enums.GeneralErrorCode;
 import com.xiaozhi.zhh.aoaojiao.exception.BaseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.util.Assert;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -46,7 +47,7 @@ public class GeneralExceptionHandler {
      * 参数校验失败处理
      */
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(BindException.class)
+    @ExceptionHandler({ BindException.class, IllegalStateException.class })
     public R<String> handleBindException(BindException ex) {
         String errorMessage = handleErrorMsg(ex.getBindingResult());
         if (log.isDebugEnabled()) {
